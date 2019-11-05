@@ -1,4 +1,8 @@
-void	ft_putchar(char c);
+#include<unistd.h>
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 void ft_print_comb2(void)
 {
 	int a;
@@ -22,4 +26,10 @@ void ft_print_comb2(void)
 		}
 	}
 	ft_putchar('\n');
+}
+int	main()
+{
+	ft_putchar('H');
+	ft_putchar('\n');
+	ft_print_comb2();
 }
